@@ -1,5 +1,5 @@
 # java-webscoket  by dlf(1429264916@qq.com) v1.0.0 for 2018-3-1
-#1.技术概括
+1.技术概括
 springBoot+mybatisPlus+redis+nginx+webscoket
 2.使用nginx集群，多台机器之间共享webscoketSession，适用于在线聊天，信息推送等业务。
 3.应用案列
