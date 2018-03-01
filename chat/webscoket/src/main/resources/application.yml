@@ -1,0 +1,55 @@
+server:
+    port: 8081
+#spring
+spring:
+  devtools:
+    restart:
+      enabled: true     #������Ϊ���Ȳ���ģ���mybatis���޹ص�
+
+  #DATABASE CONFIG
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: dlf
+    password: 16899199
+    url: jdbc:mysql://172.16.1.184/chatDemo?useUnicode=true&amp;characterEncoding=utf8
+    type: com.alibaba.druid.pool.DruidDataSource   #����������druid���ӳأ����¶���druid��������Ϣ
+    filters: stat,wall,log4j
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+    connection-properties: druid.stat.merggSql=ture;druid.stat.slowSqlMillis=5000
+    #����redis
+  redis:
+          host: 106.14.207.179
+          port: 16379
+          password:
+          max-idle: 500
+          min-idle: 50
+          max-active: 2000
+          max-wait: 10000
+#mybatis
+mybatis:
+  mapper-locations: classpath*:/mapper/**Mapper.xml   #��xml�ļ�����com.XX.mapper.*�п��ܻ�����ҵ������⣬�����������resource�µ�mapper��
+  #ʵ��ɨ�裬���package�ö��Ż��߷ֺŷָ�
+  typeAliasesPackage: com.gjsg.gjchat.ws.entity  #������ʵ�����λ��
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+#logging
+logging:
+  level: warn,debug,error,info
+
+#
+#server.ssl.key-store: classpath:keystore.jks
+#server.ssl.key-store-password: kurento
+#server.ssl.keyStoreType: JKS
+#server.ssl.keyAlias: kurento-selfsigned

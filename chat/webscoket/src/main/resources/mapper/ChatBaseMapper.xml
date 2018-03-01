@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gjsg.gjchat.webscoket.dao.ChatBaseMapper">
+	<select id="querySql" parameterType="java.util.Map" resultMap="ResultMapVo">
+		${sql}
+	</select>
+	<insert id="insertSql"  parameterType="java.util.Map">
+		${sql}
+	</insert>
+	<update id="updateSql"  parameterType="java.util.Map">
+		${sql}
+	</update>
+	<update id="deleteSql"  parameterType="java.util.Map">
+		${sql}
+	</update>
+	<resultMap id="ResultMapVo" type="java.util.Map" >
+		<result column="GUID" property="guid" jdbcType="CHAR" />
+		<result column="ORG" property="org" jdbcType="VARCHAR" />
+		<result column="ID" property="id" jdbcType="VARCHAR" />
+		<result column="USRGUID" property="usrguid" jdbcType="VARCHAR" />
+		<result column="CRTDAT" property="crtdat" jdbcType="VARCHAR" />
+		<result column="STATE" property="state" jdbcType="VARCHAR" />
+		<result column="STRDAT" property="strdat" jdbcType="VARCHAR" />
+		<result column="MEATIME" property="meatime" jdbcType="VARCHAR" />
+		<result column="BLGLU" property="blglu" jdbcType="VARCHAR" />
+		<result column="HEAT" property="heat" jdbcType="VARCHAR" />
+		<result column="DIABLOPRE" property="diablopre" jdbcType="VARCHAR" />
+		<result column="SYSBLOPRE" property="sysblopre" jdbcType="VARCHAR" />
+		<result column="VALUE" property="value" jdbcType="VARCHAR" />
+		<result column="TYPE" property="type" jdbcType="VARCHAR" />
+		<result column="HEABEAT" property="heabeat" jdbcType="VARCHAR" />
+		<result column="TIME" property="time" jdbcType="VARCHAR" />
+		<result column="NUM" property="num" jdbcType="VARCHAR" />
+		<result column="USR" property="usr" jdbcType="VARCHAR" />
+		<result column="DAT" property="dat" jdbcType="VARCHAR" />
+		<result column="NAME" property="name" jdbcType="VARCHAR" />
+		<result column="CRTUSR" property="crtusr" jdbcType="VARCHAR" />
+		<result column="IMG" property="img" jdbcType="VARCHAR" />
+		<result column="HOSPITAL" property="hospital" jdbcType="VARCHAR" />
+		<result column="NOTE" property="note" jdbcType="VARCHAR" />
+		<result column="PATIENT" property="patient" jdbcType="VARCHAR" />
+		<result column="JOB" property="job" jdbcType="VARCHAR" />
+		<result column="DEPT" property="dept" jdbcType="VARCHAR" />
+		<result column="JOBTITLE" property="jobtitle" jdbcType="VARCHAR" />
+		<result column="STAT" property="stat" jdbcType="VARCHAR" />
+		<result column="SEX" property="sex" jdbcType="VARCHAR" />
+		<result column="MOBILE" property="mobile" jdbcType="VARCHAR" />
+		<result column="DEPTNAM" property="deptnam" jdbcType="VARCHAR" />
+	</resultMap>
+</mapper>

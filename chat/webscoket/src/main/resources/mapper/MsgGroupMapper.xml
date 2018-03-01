@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gjsg.gjchat.webscoket.dao.MsgGroupMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.gjsg.gjchat.webscoket.entity.MsgGroup">
+		<id column="id" property="id" />
+		<result column="guid" property="guid" />
+		<result column="app_guid" property="appGuid" />
+		<result column="creat_date" property="creatDate" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, guid, app_guid AS appGuid, creat_date AS creatDate
+    </sql>
+
+</mapper>
